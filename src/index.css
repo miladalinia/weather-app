@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'montseratt', sans-serif;
+}
+
+.app {
+    background-image: url("./assets/noaa-99F4mC79j1I-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s ease;
+}
+
+.app.warm {
+    background-image: url("./assets/mado-el-khouly-MA8YoAoKpfY-unsplash.jpg");
+}
+
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+    padding: 25px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto 50px;
+}
+
+.searchBtn{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    left:-80px;
+    color:#000;
+    bottom: 10px;
+    background-color: #fff;
+}
+
+.search-box .search-bar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.24) none;
+    border-radius: 0 0 16px 16px;
+    margin-top: -25px;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.84);
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box{
+    display: grid;
+    justify-items: center;
+}
+
+.location-box .location {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box {
+    display: grid;
+    justify-items: center;
+}
+
+.weather-box .temp {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 15px;
+    color: gold;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
